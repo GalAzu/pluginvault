@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+package-lock.json.backup
+
+# Build output
+dist/
+build/
+
+# Rust / Tauri
+src-tauri/target/
+src-tauri/gen/
+src-tauri/Cargo.lock
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Tauri generated
+src-tauri/capabilities/generated/
+
+# Test output
+coverage/
+*.lcov
+
+# Local database (for development)
+*.db
+*.db-shm
+*.db-wal
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+desktop.ini
+$RECYCLE.BIN/
+
+# Temporary
+tmp/
+temp/
+*.tmp

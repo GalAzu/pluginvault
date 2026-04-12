@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0b10;
+  --color-surface: #14161f;
+  --color-surface-light: #1c1f2b;
+  --color-surface-lighter: #262a3a;
+  --color-primary: #7c8cfa;
+  --color-primary-hover: #9ca3fb;
+  --color-accent: #22d3ee;
+  --color-accent-hover: #67e8f9;
+  --color-text: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-muted: #94a3b8;
+  --color-muted-strong: #64748b;
+  --color-border: #2a2f42;
+  --color-border-strong: #3a4057;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-vst3: #6366f1;
+  --color-vst2: #a855f7;
+  --color-au: #3b82f6;
+  --color-aax: #f97316;
+  --color-clap: #22c55e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* Selection */
+::selection {
+  background-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+}
+
+/* Focus ring — accessible keyboard focus */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #7c8cfa;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Prevent text selection on clickable rows */
+tr[data-clickable] {
+  user-select: none;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulseFade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
