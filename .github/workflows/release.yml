@@ -51,7 +51,7 @@ jobs:
           workspaces: "src-tauri -> target"
 
       - name: Install npm dependencies
-        run: npm ci
+        run: npm install --no-audit --no-fund
 
       - name: Build Tauri app
         uses: tauri-apps/tauri-action@v0
